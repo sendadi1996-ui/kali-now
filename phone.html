@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>KALI — Phone</title>
+<style>*{box-sizing:border-box}body{background:#04070a;color:#d8ffe9;font-family:system-ui,sans-serif;margin:0;padding:22px 16px;text-align:center;min-height:100vh}
+.k{color:#16ff9e;font-size:1.6rem;font-weight:800;letter-spacing:1px;margin-bottom:6px}
+.s{color:#5f8c7c;font-size:.85rem;margin-bottom:20px}
+.big{display:block;width:100%;background:#16ff9e;color:#04140d;border:0;border-radius:14px;padding:20px;font-size:1.1rem;font-weight:800;text-decoration:none;margin-bottom:12px}
+.alt{display:block;width:100%;background:#0b1f18;color:#7ef0c4;border:1px solid #1f5c46;border-radius:12px;padding:15px;font-size:.92rem;text-decoration:none;margin-bottom:12px}
+.c{background:#061410;border:1px solid #17402f;border-radius:12px;padding:12px;text-align:left;margin-top:14px}
+.c p{color:#5f8c7c;font-size:.75rem;text-align:right;margin:0 0 6px}
+.c code{display:block;font-family:monospace;font-size:.72rem;color:#7ef0c4;direction:ltr;line-height:1.7;word-break:break-all}
+.cp{width:100%;margin-top:8px;background:#17402f;color:#7ef0c4;border:1px solid #2a6b52;border-radius:8px;padding:10px;font-size:.82rem;font-weight:700}
+.t{color:#3f6153;font-size:.72rem;margin-top:16px;line-height:1.8}</style></head>
+<body>
+<div class="k">KALI · PHONE</div>
+<div class="s">دوس على الزرار وكتلقى كالي فالتليفون — بلا حساب، بلا فلوس</div>
+<a class="big" href="https://f-droid.org/packages/com.termux/">1. حمّل Termux (مرة وحدة)</a>
+<a class="alt" href="https://shell.cloud.google.com/">ولا: لينكس فالمتصفح ديركت</a>
+<div class="c">
+  <p>من بعد ما تحل Termux، لصق هاد الأوامر واحد بواحد:</p>
+  <code id="c1">pkg update -y
+pkg install proot-distro -y
+proot-distro install kali
+proot-distro login kali</code>
+  <button class="cp" onclick="cp()">نسخ الأوامر</button>
+</div>
+<div class="t">من بعد ما تدخل لكالي، نصب الأدوات: <span style="color:#7ef0c4;direction:ltr;display:inline-block">apt update && apt install -y nmap whois dnsutils netcat-traditional curl whatweb</span><br>من بعد، Termux كيبقى فالتليفون — كل مرة غير حلو وكتب proot-distro login kali.</div>
+<script>function cp(){var t=document.getElementById('c1').textContent;navigator.clipboard.writeText(t).then(function(){var b=document.querySelector('.cp');b.textContent='✓ تناسخ';setTimeout(function(){b.textContent='نسخ الأوامر'},2000)})}</script>
+</body></html>
